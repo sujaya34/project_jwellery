@@ -1,10 +1,8 @@
-import React from 'react'
-import GridDefinition from './GridDefinition'
+import React from "react";
+import GridDefinition from "./GridDefinition";
 
 function MainBody() {
-  return (
-    <GridDefinition>MainBody</GridDefinition>
-  )
+  return <GridDefinition>MainBody</GridDefinition>;
 }
 
-export default MainBody
+export default MainBody;

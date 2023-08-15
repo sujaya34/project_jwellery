@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 
 import Cd1 from "../../../Assets/images/cd1.PNG";
 import Cd2 from "../../../Assets/images/cd2.PNG";
@@ -14,7 +14,6 @@ import Cd11 from "../../../Assets/images/cd11.PNG";
 import Cd12 from "../../../Assets/images/cd12.PNG";
 import "../../../Assets/css/styling.css";
 import { useState } from "react";
-// const LazyCard = lazy(() => import("./LazyCard"));
 function JwelleryCard({ setShowCardDetails, setShowCards, setSelectedCards }) {
   const [userList, setUserList] = useState([
     {
@@ -123,27 +122,12 @@ function JwelleryCard({ setShowCardDetails, setShowCards, setSelectedCards }) {
       }
     });
   }
-  // return (
-  //   <div className="card-list d-flex justify-content-center mt-4">
-  //     {userList.map((userList) => (
-  //       <Suspense key={userList.id} fallback={<div>Loading...</div>}>
-  //         <LazyCard
-  //           imageUrl={userList.imageUrl[0]}
-  //           title={userList.title}
-  //           price={userList.price}
-  //           offer={userList.offer}
-  //         />
-  //       </Suspense>
-  //     ))}
-  //   </div>
-  // );
   return (
     <div className="card-list d-flex justify-content-center mt-4">
       {userList.map((userList) => (
         <div
           key={userList.id}
           className="card  animate-card"
-          id={`card-${userList.id}`}
           onClick={() => {
             showDetails(userList.id);
           }}>
