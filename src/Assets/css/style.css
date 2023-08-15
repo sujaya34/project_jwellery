@@ -1,0 +1,32 @@
+.col {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+.col img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.col img:hover {
+  opacity: 1;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+  position: relative;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
